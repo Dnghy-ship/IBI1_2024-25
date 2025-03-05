@@ -1,5 +1,7 @@
-This is an example file for reflection in IBI1_2024-25.
+This is my reflection in the practical of IBI1_2024-25.
 
 During this course, I have learnt version control, how to navigate Unix-like systems and how to write simple programs in Python.
 
-I have also learnt to write careful instructions when communicating online!
+I handle lots of problems cooperating with my classmate and I feel good to help others.
+
+I don't have any question right now and I will keep learning.
