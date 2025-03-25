@@ -2,6 +2,7 @@
 #import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
 
 N=10000
 #create array to store the data
@@ -34,7 +35,7 @@ for i in range(0,10):
 #make the plot
 plt.figure(figsize=(10,6))
 for i in range(0, 10):
-    plt.plot(data[i], label=f"{10*i}%")
+    plt.plot(data[i], label=f"{10*i}%") #maybe viridis is useless in a loop
 #Plot the 100% vaccination line seperately
 infected_100=[0]*1001
 plt.plot(infected_100, label="100%", color="yellow")
