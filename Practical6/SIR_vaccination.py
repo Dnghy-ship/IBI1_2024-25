@@ -35,6 +35,9 @@ for i in range(0,10):
 plt.figure(figsize=(10,6))
 for i in range(0, 10):
     plt.plot(data[i], label=f"{10*i}%")
+#Plot the 100% vaccination line seperately
+infected_100=[0]*1001
+plt.plot(infected_100, label="100%", color="yellow")
 plt.xlabel("Time")
 plt.ylabel("number of people")
 plt.title("SIR model with different vaccination rates")
