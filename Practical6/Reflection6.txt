@@ -1,1 +1,7 @@
 This is my reflection for IBI1 Practical 6:
+I think practical 6 is much better than previous practicals because it has more flexibility and more challenges.
+Overall this practical isn't to hard and I enjoy discussing with teachers and classmates.
+In this practical I learn a bit of usage of numpy and matplotlib, which are very crutial and useful.
+I have a sense of accomplishment when I solve each bugs and improve the functions of programs, and we may have better way than AI suggested.
+For example, we even print out an animation of our stimulation in spatial_SIR program for fun.
+It can also be fun, right?
