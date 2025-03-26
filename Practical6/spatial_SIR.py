@@ -24,11 +24,12 @@ for time in range(1,101):
                 #find the suscepyible individuals
                 if population[r,c]==0:
                     #infect
-                    population[r,c]=int(np.random.choice(range(2),size=1,p=[0.7,0.3]))
+                    population[r,c]=np.random.choice(range(2),p=[0.7,0.3])
     #maybe the infected people will recover
-        population[x,y]=int(np.random.choice(range(1,3),size=1,p=[0.95,0.05]))
+        population[x,y]=np.random.choice(range(1,3),p=[0.95,0.05])
 
 #plot a heat map
 plt.figure(figsize=(6,4),dpi=150)
 plt.imshow(population,cmap="viridis",interpolation="nearest",vmin=0,vmax=2)
+plt.title("Spatial_SIR Time=100")
 plt.show()
