@@ -30,5 +30,5 @@ for time in range(1,101):
 
 #plot a heat map
 plt.figure(figsize=(6,4),dpi=150)
-plt.imshow(population,cmap="viridis",interpolation="nearest")
+plt.imshow(population,cmap="viridis",interpolation="nearest",vmin=0,vmax=2)
 plt.show()
