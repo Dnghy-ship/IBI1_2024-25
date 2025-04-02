@@ -25,19 +25,27 @@ for s in seq:
     line=s.split('\n')
     header=line[0]
     sequences=''.join(line[1:])
+    #find the name
+    find=re.findall(r'gene:(\S+)\s',header)
+    #sometimes this way to find the name is error, so fix it
+    if not find:
+        continue
+    name=find[0]
+    #reset count for each gene
+    count=0
     #check the tata box
     if re.findall(splice,sequences):
         spl=re.findall(splice,sequences)
         for targets in spl:
             if re.search(tata,targets):
-                #find the name
-                find=re.findall(r'gene:(\S+)\s',header)
-                name=find[0]
                 # Count the number of TATA boxes in the intron
-                count = len(re.findall(tata, targets))
-                # Write the results to the output file
-                store.write(f">{name}   {count}\n")
-                store.write(f"{targets}\n")
+                cou=len(re.findall(tata, targets))
+                count=count+cou
+    if count==0:
+        continue
+    # Write the results to the output file
+    store.write(f">{name}   {count}\n")
+    store.write(f"{sequences}\n")
 #close the file
 file.close()
 store.close()
