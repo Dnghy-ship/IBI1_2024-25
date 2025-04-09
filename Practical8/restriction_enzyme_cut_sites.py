@@ -1,7 +1,7 @@
 #restriction_enzyme_cut_sites
 def cut(dna,enzyme):
     #Check if both sequences contain only canonical nucleotides (learnt from copilot)
-    if not all(base in "ACGT" for base in dna.upper()) or not all(base in "ACGT" for base in enzyme.upper()):
+    if not all(base in "ACGT" for base in dna) or not all(base in "ACGT" for base in enzyme):
         return "Error: Wrong sequence!"
     #find the cutting positions
     position=[]
@@ -10,6 +10,8 @@ def cut(dna,enzyme):
     for i in range(0,l+1):
         if dna[i:i+len(enzyme)]==enzyme:
             position.append(i+1)
+    if position==[]:
+        return "No found"
     return position
 
 #Example:

@@ -27,3 +27,9 @@ strength2=1
 #output
 d2=dosage(weight2,strength2)
 print("Dosage (ml): ",d2)
+
+#Example
+weight=int(input("Weight: "))
+stength=int(input("Strength: "))
+d=dosage(weight,stength)
+print("Dosage (ml): ",d)
