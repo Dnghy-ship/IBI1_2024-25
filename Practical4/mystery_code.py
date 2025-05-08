@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: It can generate two random numbers in range(1,6), and count how many times it takes to get two identical numbers.
+# Answer: It can generate two random numbers in 1-6, and count how many times it takes to get two identical numbers.
 
 # Import libraries
 # randint allows drawing a random number,

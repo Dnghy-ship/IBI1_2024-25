@@ -18,6 +18,14 @@ W=X and Y
 print(W)
 #W=False
 
+# Truth table for AND, OR, NOT
+# Truth Table:
+# X       Y       X AND Y X OR Y  NOT X
+# True    True    True    True    False
+# True    False   False   True    False
+# False   True    False   True    True
+# False   False   False   False   True
+
 
 
 
