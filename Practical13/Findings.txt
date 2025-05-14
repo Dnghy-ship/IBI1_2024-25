@@ -1,0 +1,5 @@
+SDOM_HUMAN Findings：
+Length: 222
+Subcellular localisation : Mitochondrion matrix
+
+Identities: 83.3%-100%
