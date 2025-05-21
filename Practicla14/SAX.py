@@ -4,6 +4,7 @@ import datetime
 
 #SAX handler
 class GOHandler(xml.sax.ContentHandler):
+    #Initiate the class
     def __init__(self):
         self.current_data = ""
         self.namespace = ""
@@ -14,14 +15,14 @@ class GOHandler(xml.sax.ContentHandler):
             "biological_process": ("", 0),
             "cellular_component": ("", 0)
         }
-
+    #read the starting tag, reset the content
     def startElement(self, tag, attributes):
         self.current_data = tag
         if tag == "term":
             self.namespace = ""
             self.name = ""
             self.is_a_count = 0
-
+    #store the new content
     def characters(self, content):
         if self.current_data == "namespace":
             self.namespace += content.strip()
@@ -29,7 +30,8 @@ class GOHandler(xml.sax.ContentHandler):
             self.name += content.strip()
         elif self.current_data == "is_a":
             self.is_a_count += 1
-
+    #read the end tag
+    #check if the current term is the deepest one
     def endElement(self, tag):
         if tag == "term":
             if self.namespace in self.max_depth:
